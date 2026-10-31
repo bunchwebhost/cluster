@@ -3,12 +3,14 @@ kind: FluxInstance
 metadata:
   name: flux
   namespace: flux-system
+  labels:
+    kustomize.toolkit.fluxcd.io/prune: disabled
   annotations:
     fluxcd.controlplane.io/reconcileEvery: "1h"
     fluxcd.controlplane.io/reconcileTimeout: "10m"
 spec:
   distribution:
-    version: 2.x
+    version: "2.10.x"
     registry: "ghcr.io/fluxcd"
     artifact: "oci://ghcr.io/controlplaneio-fluxcd/flux-operator-manifests"
   components:
