@@ -1,1 +1,0 @@
-kubectl apply -f kubernetes/infra/flux-system/flux-instance/app/fluxinstance.yaml
