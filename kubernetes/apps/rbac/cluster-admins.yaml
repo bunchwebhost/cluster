@@ -1,0 +1,18 @@
+---
+# Users are the CN of a client cert signed through the CSR API
+# (signer kubernetes.io/kube-apiserver-client). Remove a subject to revoke.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: cluster-admins
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+  - apiGroup: rbac.authorization.k8s.io
+    kind: User
+    name: liam
+  - apiGroup: rbac.authorization.k8s.io
+    kind: User
+    name: hdo
