@@ -18,6 +18,11 @@ spec:
     kind: GitRepository
     name: cluster
 
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-age
+
   dependsOn:
     - name: cert-manager
 

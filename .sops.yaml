@@ -1,0 +1,8 @@
+keys:
+  - &twilight age1kcz9gnm8pwscxraae8g3c3gcr9yzj8ph5mwvuzjzuf90z8k5cyystep8wp
+  - &flux     age12vyhg3494uwm8pkn8r06ymwghjln0ztp4sdrrz3ys9hjr8m5wyuqk70z99
+creation_rules:
+  - path_regex: kubernetes/.*\.sops\.ya?ml$
+    encrypted_regex: ^(data|stringData)$
+    key_groups:
+      - age: [*twilight, *flux]
