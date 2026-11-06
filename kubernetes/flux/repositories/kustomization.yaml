@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
   - flux-operator.yaml
   - cert-manager.yaml
+  - local-path-provisioner.yaml
