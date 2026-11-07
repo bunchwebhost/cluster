@@ -1,0 +1,27 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: bwh-storage1
+spec:
+  interval: 1h
+  chart:
+    spec:
+      chart: ./deploy/chart/local-path-provisioner
+      sourceRef:
+        kind: GitRepository
+        name: local-path-provisioner
+        namespace: flux-system
+  values:
+    storageClass:
+      name: local-path
+      defaultClass: false
+      allowedTopologies:
+        - matchLabelExpressions:
+            - key: kubernetes.io/hostname
+              values:
+                - fluttershy
+    nodePathMap:
+      - node: fluttershy
+        paths:
+          - /mnt/storage1
