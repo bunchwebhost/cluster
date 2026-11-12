@@ -1,14 +1,14 @@
 ---
 apiVersion: source.toolkit.fluxcd.io/v1
-kind: GitRepository
+kind: OCIRepository
 metadata:
   name: local-path-provisioner
   namespace: flux-system
 spec:
-  url: https://github.com/rancher/local-path-provisioner
+  url: oci://ghcr.io/rancher/local-path-provisioner/charts/local-path-provisioner
   interval: 3h
   ref:
-    tag: v0.0.37
-  ignore: |
-    /*
-    !/deploy/chart/local-path-provisioner/
+    tag: 0.0.37
+  layerSelector:
+    mediaType: application/vnd.cncf.helm.chart.content.v1.tar+gzip
+    operation: copy
