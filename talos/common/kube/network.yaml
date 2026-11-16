@@ -30,5 +30,5 @@ $patch: delete
 ---
 apiVersion: v1alpha1
 kind: Layer2VIPConfig
-name: 10.128.128.128
+name: 10.64.128.128
 link: eno1
