@@ -1,7 +1,8 @@
 ---
 apiVersion: v1alpha1
 kind: ResolverConfig
+nameservers:
+  - address: 10.64.0.1
 hostDNS:
   enabled: true
   forwardKubeDNSToHost: false
-

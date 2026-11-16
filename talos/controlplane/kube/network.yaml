@@ -1,0 +1,15 @@
+---
+apiVersion: v1alpha1
+kind: KubeProxyConfig
+enabled: false
+
+---
+apiVersion: v1alpha1
+kind: KubeCoreDNSConfig
+enabled: false
+
+---
+apiVersion: v1alpha1
+kind: Layer2VIPConfig
+name: 10.64.128.128
+link: net0

@@ -9,16 +9,6 @@ serviceSubnets:
 
 ---
 apiVersion: v1alpha1
-kind: KubeProxyConfig
-enabled: false
-
----
-apiVersion: v1alpha1
-kind: KubeCoreDNSConfig
-enabled: false
-
----
-apiVersion: v1alpha1
 kind: KubePrismConfig
 port: 7445
 
@@ -26,9 +16,3 @@ port: 7445
 apiVersion: v1alpha1
 kind: KubeFlannelCNIConfig
 $patch: delete
-
----
-apiVersion: v1alpha1
-kind: Layer2VIPConfig
-name: 10.64.128.128
-link: eno1
