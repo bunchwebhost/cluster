@@ -13,3 +13,10 @@ addresses:
   - address: 10.64.0.7/16
 routes:
   - gateway: 10.64.0.1
+
+---
+apiVersion: v1alpha1
+kind: LinkAliasConfig
+name: net0
+selector:
+  match: mac(link.permanent_addr) == "e4:e7:49:51:46:7c"
