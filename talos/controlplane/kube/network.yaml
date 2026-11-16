@@ -11,5 +11,5 @@ enabled: false
 ---
 apiVersion: v1alpha1
 kind: Layer2VIPConfig
-name: 10.64.128.128
+name: 10.64.64.64
 link: net0

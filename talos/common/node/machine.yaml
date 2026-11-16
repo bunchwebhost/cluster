@@ -6,7 +6,7 @@ machine:
     - 10.64.0.8
     - 10.64.0.9
     - 10.64.0.10
-    - 10.64.128.128
+    - 10.64.64.64
 
   features:
     diskQuotaSupport: true
